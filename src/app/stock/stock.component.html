@@ -1,0 +1,37 @@
+
+<div class="col">
+  <div class="card crow-4 m-2" style="width: 18rem;" *ngFor = "let produit of stock">
+
+    <div class="row p-2 bg-white border rounded">
+      <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" [src]="produit.imagePath"></div>
+      <div class="col-md-6 mt-1">
+        <h5>{{produit.name}}</h5>
+        <div class="d-flex flex-row">
+          <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
+        </div>
+        <div class="mt-1 mb-1 spec-1"><span>{{produit.quantity}} left</span></div>
+        <p class="text-justify text-truncate para mb-0">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.<br><br></p>
+      </div>
+      <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+        <div class="d-flex flex-row align-items-center">
+          <h4 class="mr-1">{{produit.price}}</h4><span class="strike-text">$20.99</span>
+        </div>
+        <h6 class="text-success">Free shipping</h6>
+        <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Details</button>
+          <button class="btn btn-outline-primary btn-sm mt-2" type="button" *ngIf="produit.quantity > 0" (click)="countdown(produit)">Buy</button></div>
+        <button class="btn btn-outline-primary btn-sm mt-2" type="button" *ngIf="produit.quantity === 0">Out of stock!</button></div>
+      </div>
+    </div>
+
+<!--    <img [src]="produit.imagePath" class="card-img-top" alt="...">-->
+<!--    <div class="card-body">-->
+<!--      <h5 class="card-title">{{produit.name}}</h5>-->
+<!--      <p class="card-text">{{produit.description}}</p>-->
+<!--      <p class="card-text">{{produit.quantity}} left </p>-->
+<!--      <a href="#" class="btn btn-primary" *ngIf="produit.quantity > 0" (click)="countdown(produit)">Add to cart</a>-->
+<!--      <a href="#" class="btn btn-primary" *ngIf="produit.quantity === 0">Out of stock!</a>-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+<!--</div>-->
